@@ -1,45 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
 
-body{
+body {
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-
+  min-height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(213, 198, 58, 1) 53%, rgba(0, 212, 255, 1) 100%);
+  font-family: 'Roboto', sans-serif;
 }
 .wrapper {
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg,  rgba(213,198,58,1) 53%, rgba(0,212,255,1) 100%);
-
+  flex-grow: 1;
+  text-align: center;
 }
 .container {
   display: flex;
   flex-wrap: wrap;
+  padding: 0px 15px;
+  justify-content: center;
 }
 .col {
   flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.name {
-}
-.avatar img{
+
+.avatar img {
   max-width: 300px;
   max-height: 300px;
   object-fit: cover;
 }
-.item {
+.info__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
-.item__tell {
+.list__item {
+  padding: 5px;
+  font-size: 24px;
+  border: 1px solid transparent;
+  color: black;
+  text-transform: uppercase;
 }
-.item__maill {
+.list__item:hover {
+  cursor: pointer;
+  border: 1px solid #ffff;
+  border-radius: 5px;
+  color: cadetblue;
+  transition: all 0.4s;
 }
-.block-info {
+.item__link {
+  color: #ffff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+  padding-left: 25px;
 }
-.block-info__title {
+.item__link:not(last-child) {
+  margin-right: 50px;
 }
-.footer {
+.item__link:hover {
+  color: black;
+  transition: all 0.6s;
 }
+.item__link--mail {
+  background-image: url('/img/phone.svg');
+  background-repeat: no-repeat;
+}
+.item__link--tell {
+  background-image: url('/img/mail.svg');
+  background-repeat: no-repeat;
+}
+.year {
+  margin-left: 15px;
+}
+
 .footer__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.footer__link.footer-git {
+
+.footer__link {
+  flex: 0 0 50px;
 }
-.footer__link.footer-rsshcol {
+.footer__link img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.footer__link:not(last-child) {
+  margin-left: 25px;
+}
+.item {
+  margin-top: 20px;
+}
+.item__title {
+  margin-top: 20px;
 }
